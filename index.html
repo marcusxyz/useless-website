@@ -14,7 +14,7 @@
 
         <!-- Input field -->
         <div class="option">
-          <label>Your text</label>
+          <label>Type something</label>
           <input
             type="text"
             name="sentence"
@@ -24,8 +24,21 @@
 
         <!-- Adjust text size -->
         <div class="option">
-          <label>Type size <span class="typesize-output">64px</span></label>
+          <label>Type size<span class="typesize-output">64px</span></label>
           <input type="range" name="typesize" min="12" max="200" value="64" />
+        </div>
+
+        <!-- Adjust line height -->
+        <div class="option">
+          <label>Line height<span class="lineheight-output">1.5</span></label>
+          <input
+            type="range"
+            name="lineheight"
+            min="0.7"
+            max="2.5"
+            value="1.5"
+            step="0.1"
+          />
         </div>
       </section>
       <textarea class="output">

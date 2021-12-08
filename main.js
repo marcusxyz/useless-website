@@ -1,8 +1,15 @@
+// For input
 const sentenceTag = document.querySelector(`input[type='text']`);
 const outputTag = document.querySelector('textarea.output');
 const originalText = outputTag.value;
+
+// For typesize
 const typesizeTag = document.querySelector(`input[name='typesize']`);
 const typesizeOutput = document.querySelector('span.typesize-output');
+
+// For lineheight
+const lineheightTag = document.querySelector(`input[name='lineheight']`);
+const lineheightOutput = document.querySelector('span.lineheight-output');
 
 // When the user types in sentenceTag, update the outputTag
 // List of KeyboardEvent https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent
@@ -28,4 +35,9 @@ outputTag.addEventListener('keyup', () => {
 typesizeTag.addEventListener('input', () => {
   typesizeOutput.innerHTML = typesizeTag.value + 'px'; // changing HTML sspan text
   outputTag.style.fontSize = typesizeTag.value + 'px'; // changing CSS style
+});
+
+lineheightTag.addEventListener('input', () => {
+  lineheightOutput.innerHTML = lineheightTag.value;
+  outputTag.style.lineHeight = lineheightTag.value; // outputTag once again, because this is where you change lineheight in CSS
 });

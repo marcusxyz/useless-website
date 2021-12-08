@@ -28,8 +28,10 @@
 :root {
   /* Color */
   --white: #fff;
-  --black: #2a2a2a;
-  --faded-black: #575757;
+  --black: #000;
+  --faded-black: #1a1a1a;
+  --fadest-black: #333;
+  --highlight: #bababa;
 
   /* Font size */
   --base-size: 16px;
@@ -51,6 +53,7 @@ body {
   padding: 0;
   overflow: hidden;
   font-family: 'Faune', 'Arial';
+  line-height: 1.5;
   color: var(--white);
   background: var(--black);
 }
@@ -79,7 +82,7 @@ div.option {
 
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 label span {
@@ -91,9 +94,17 @@ input[type='text'] {
   width: 100%;
   background-color: var(--faded-black);
   color: var(--white);
-  border: none;
+  border: 1px solid var(--fadest-black);
+  border-radius: 5px;
   outline: none;
-  padding: 8px;
+  padding: 12px;
+  margin-top: 6px;
+  transition: all 0.2s;
+}
+
+input[type='text']:focus {
+  border: 1px solid var(--highlight);
+  box-shadow: 0 0 0 1px var(--highlight);
 }
 
 input[type='range'] {
@@ -103,10 +114,12 @@ input[type='range'] {
 textarea.output {
   width: 100%;
   height: 100vh;
-  margin: 40px;
+  padding: 40px;
   font-size: var(--display);
   background: none;
   border: none;
   outline: none;
   color: var(--white);
+  background-color: var(--faded-black);
+  line-height: 1.5;
 }
