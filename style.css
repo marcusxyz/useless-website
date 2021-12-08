@@ -1,0 +1,53 @@
+/*********************
+ * @FONTFACE *
+*********************/
+
+@font-face {
+  font-family: 'Faune';
+  font-weight: 400;
+  src: url(/fonts/faune-regular.woff2);
+}
+
+@font-face {
+  font-family: 'Faune';
+  font-weight: 400;
+  font-style: italic;
+  src: url(/fonts/faune-italic.woff2);
+}
+
+@font-face {
+  font-family: 'Faune';
+  font-weight: 400;
+  src: url(/fonts/faune-bold.woff2);
+}
+
+/*********************
+ * Variables *
+*********************/
+
+:root {
+  /* Color */
+  --white: #fff;
+  --black: #000;
+
+  /* Font size */
+
+  --base-size: 16px;
+  --p: 1.25rem;
+  --p-small: 1rem;
+}
+
+/*********************
+ * General *
+*********************/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Faune', 'Arial';
+}
