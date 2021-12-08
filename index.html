@@ -8,23 +8,30 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section class="options">
-      <h1>Useless type</h1>
+    <main>
+      <section class="options">
+        <h1>Useless type</h1>
 
-      <div class="option">
-        <label>Your text</label>
-        <input
-          type="text"
-          name="sentence"
-          id="sentence"
-          placeholder="The quick brown fox..."
-        />
-      </div>
-    </section>
+        <!-- Input field -->
+        <div class="option">
+          <label>Your text</label>
+          <input
+            type="text"
+            name="sentence"
+            placeholder="The quick brown fox..."
+          />
+        </div>
 
-    <section class="output">
-      <p>The quick brown fox jumps over the lazy dog</p>
-    </section>
+        <!-- Adjust text size -->
+        <div class="option">
+          <label>Type size <span>64px</span></label>
+          <input type="range" name="typesize" min="12" max="200" value="64" />
+        </div>
+      </section>
+      <textarea class="output">
+The quick brown fox jumps over the lazy dog</textarea
+      >
+    </main>
 
     <script src="/main.js"></script>
   </body>

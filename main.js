@@ -1,15 +1,21 @@
 const sentenceTag = document.querySelector(`input[type="text"]`);
-const outputTag = document.querySelector('section.output');
-const originalText = outputTag.innerHTML;
+const outputTag = document.querySelector('textarea.output');
+const originalText = outputTag.value;
 
 // When the user types in sentenceTag, update the outputTag
 // List of KeyboardEvent https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent
 
-const displayUpdate = sentenceTag.addEventListener('keyup', () => {
+// Typing from input
+sentenceTag.addEventListener('keyup', () => {
   if (sentenceTag.value) {
-    outputTag.innerHTML = sentenceTag.value;
+    outputTag.value = sentenceTag.value;
   } else {
-    // If there is no value add the original text
-    outputTag.innerHTML = originalText;
+    // If there is no value put back the original text
+    outputTag.value = originalText;
   }
+});
+
+// Typing from textarea
+outputTag.addEventListener('keyup', () => {
+  sentenceTag.value = outputTag.value;
 });
