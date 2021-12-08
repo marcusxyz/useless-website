@@ -28,7 +28,7 @@
 :root {
   /* Color */
   --white: #fff;
-  --black: #000;
+  --black: #2a2a2a;
 
   /* Font size */
 
@@ -50,4 +50,19 @@ body {
   padding: 0;
   overflow: hidden;
   font-family: 'Faune', 'Arial';
+  color: var(--white);
+  background: var(--black);
+}
+
+section.options {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 280px;
+  background: var(--black);
+}
+
+section.output {
+  margin: 40px 40px 40px 320px;
 }
