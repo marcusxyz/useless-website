@@ -14,7 +14,9 @@ A typing website that serves no purpose for the end user. This is a JavaScript a
 
 2. #### Run a live preview/server.
 
-# Code Review by [Patrik Staaf](https://github.com/patrikstaaf)
+<br>
+
+## Code Review by [Patrik Staaf](https://github.com/patrikstaaf)
 
 1. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
 1. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
@@ -22,7 +24,9 @@ A typing website that serves no purpose for the end user. This is a JavaScript a
 1. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
 1. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
 
-# Testers
+<br>
+
+## Testers
 
 Tested by the following people:
 
