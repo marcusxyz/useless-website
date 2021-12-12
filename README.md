@@ -3,6 +3,7 @@
 # Useless type
 
 A typing website that serves no purpose for the end user. This is a JavaScript assignment that required us a to make a useless website with some certain criterias.
+View [live site](https://useless-type.vercel.app/)
 
 ## Installation
 
