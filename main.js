@@ -17,17 +17,33 @@ const italicTag = document.querySelector(`input[name='italic']`);
 // For colors
 const colorTags = document.querySelectorAll('div.colors div');
 
-// When the user types in sentenceTag, update the outputTag
-// List of KeyboardEvent https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent
+// Array of placeholders
+const placeholder = [
+  'The quick brown fox jumps over the lazy dog',
+  'All questions asked by five watched experts amaze the judge.',
+  'In Baghdad, a quail gawked at a camel playing sexy lo-fi Peruvian jazz.',
+  'My girl wove six dozen plaid jackets before she quit.',
+];
 
-sentenceTag.addEventListener('keyup', () => {
-  if (sentenceTag.value) {
-    outputTag.value = sentenceTag.value;
-  } else {
-    // If there is no value put back the original text
-    outputTag.value = originalText;
-  }
-});
+// Generate a random placeholder
+const randomPlaceholder = () => {
+  const random = Math.floor(Math.random() * placeholder.length);
+  document.getElementById('placeholder').placeholder = placeholder[random];
+  outputTag.value = placeholder[random];
+
+  // When the user types in sentenceTag, update the outputTag
+  // List of KeyboardEvent https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent
+
+  sentenceTag.addEventListener('keyup', () => {
+    if (sentenceTag.value) {
+      outputTag.value = sentenceTag.value;
+    } else {
+      // If no value is given, put back the placeholder text
+      outputTag.value = placeholder[random];
+    }
+  });
+};
+randomPlaceholder();
 
 // Typing from textarea
 outputTag.addEventListener('keyup', () => {
