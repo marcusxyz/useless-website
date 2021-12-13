@@ -5,22 +5,17 @@
 @font-face {
   font-family: 'Faune';
   font-weight: 400;
-  src: url(/fonts/faune-regular.woff2);
+  src: local('faune-regular'), url(/fonts/faune-regular.woff2) format('woff2'),
+    url(/fonts/faune-regular.woff) format('woff');
 }
 
 @font-face {
   font-family: 'Faune';
   font-weight: 400;
   font-style: italic;
-  src: url(/fonts/faune-italic.woff2);
+  src: local('faune-italic'), url(/fonts/faune-italic.woff2) format('woff2'),
+    url(/fonts/faune-italic.woff) format('woff');
 }
-
-@font-face {
-  font-family: 'Faune';
-  font-weight: 700;
-  src: url(/fonts/faune-bold.woff2);
-}
-
 /*********************
  * Variables *
 *********************/

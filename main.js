@@ -28,7 +28,7 @@ const placeholder = [
 // Generate a random placeholder
 const randomPlaceholder = () => {
   const random = Math.floor(Math.random() * placeholder.length);
-  document.getElementById('placeholder').placeholder = placeholder[random];
+  document.querySelector('.placeholder').placeholder = placeholder[random];
   outputTag.value = placeholder[random];
 
   // When the user types in sentenceTag, update the outputTag
@@ -50,22 +50,20 @@ outputTag.addEventListener('keyup', () => {
 
 // When I change my typesize slider, update the span text and change font size in outputTag
 typesizeTag.addEventListener('input', () => {
-  typesizeOutput.innerHTML = typesizeTag.value + 'px'; // changing HTML span text
+  typesizeOutput.textContent = typesizeTag.value + 'px'; // changing HTML span text
   outputTag.style.fontSize = typesizeTag.value + 'px'; // changing CSS style
 });
 
 lineheightTag.addEventListener('input', () => {
-  lineheightOutput.innerHTML = lineheightTag.value;
-  outputTag.style.lineHeight = lineheightTag.value; // outputTag once again, because this is where you change lineheight in CSS
+  lineheightOutput.textContent = lineheightTag.value;
+  outputTag.style.lineHeight = lineheightTag.value;
 });
 
 // When I click my checkbox, make the outputTag italic
 italicTag.addEventListener('change', () => {
   if (italicTag.checked) {
-    console.log('Checkbox is checked..');
     outputTag.style.fontStyle = 'italic';
   } else {
-    console.log('Checkbox is not checked..');
     outputTag.style.fontStyle = 'normal';
   }
 });
@@ -76,7 +74,7 @@ colorTags.forEach((colorTag) => {
     outputTag.style.backgroundColor = colorTag.style.backgroundColor;
     outputTag.style.color = colorTag.style.color;
 
-    //Go throught all tags and remove selected
+    //Go through all tags and remove selected
     colorTags.forEach((notSelected) => {
       notSelected.classList.remove('selected');
     });
