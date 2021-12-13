@@ -14,7 +14,7 @@ const lineheightOutput = document.querySelector('span.lineheight-output');
 // For checkbox
 const italicTag = document.querySelector(`input[name='italic']`);
 
-// For colors
+// For color picker
 const colorTags = document.querySelectorAll('div.colors div');
 
 // Array of placeholders
@@ -32,8 +32,6 @@ const randomPlaceholder = () => {
   outputTag.value = placeholder[random];
 
   // When the user types in sentenceTag, update the outputTag
-  // List of KeyboardEvent https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent
-
   sentenceTag.addEventListener('keyup', () => {
     if (sentenceTag.value) {
       outputTag.value = sentenceTag.value;
@@ -51,8 +49,6 @@ outputTag.addEventListener('keyup', () => {
 });
 
 // When I change my typesize slider, update the span text and change font size in outputTag
-// https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event
-
 typesizeTag.addEventListener('input', () => {
   typesizeOutput.innerHTML = typesizeTag.value + 'px'; // changing HTML span text
   outputTag.style.fontSize = typesizeTag.value + 'px'; // changing CSS style

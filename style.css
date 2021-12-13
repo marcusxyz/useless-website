@@ -54,7 +54,6 @@
 body {
   margin: 0;
   padding: 0;
-  /* overflow: hidden; */
   font-family: 'Faune', 'Arial';
   line-height: 1.5;
   color: var(--white);
@@ -142,7 +141,6 @@ div.colors div {
 
 div.colors div.selected {
   border: 2px solid var(--highlight);
-  /* box-shadow: 0 0 0 1px var(--highlight); */
 }
 
 /* Text area */
@@ -159,6 +157,8 @@ textarea.output {
   background-color: var(--faded-black);
   line-height: 1.5;
 }
+
+/* Desktop */
 
 @media screen and (min-width: 960px) {
   main {
